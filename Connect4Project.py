@@ -155,7 +155,6 @@ def minMax (board, alpha, beta, depth, condition):
     elif someone_won(board, PLAYER):
         return (None, -99999999999999)
     elif len(all_allowed_positions(board)) == 0:
-        GAME_OVER = True
         return(None,0)        
     elif depth == 0:
         return (None, get_score_for_this_position(AI, board))    
